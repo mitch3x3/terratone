@@ -51,7 +51,9 @@ var hoverStyle = {
 function highlightFeature(e) {
     var layer = e.target;
 
-    layer.setStyle(hoverStyle);
+    layer.setStyle({className: 'hs'});
+    //$(".hoverStyle").animate({ opacity: 0 }, 1000, function() {});
+    //layer.setStyle(hoverStyle);
 
     if (!L.Browser.ie && !L.Browser.opera) {
         layer.bringToFront();
@@ -61,7 +63,9 @@ function highlightFeature(e) {
 function resetHighlight(e) {
     var layer = e.target;
 
-    layer.setStyle(mainStyle);
+    //layer.setStyle(mainStyle);
+    layer.setStyle({className: 'hs'});
+    //$(".hoverStyle").animate({ opacity: 1 }, 1000, function() {});
     //geojson.resetStyle(layer);
 }
 
@@ -78,10 +82,45 @@ function onEachFeature(feature, layer) {
 }
 
 var neighborhood_geojson = L.geoJson(neighborhoodsData, {
-    style: mainStyle,
+    style: {className: 'hs'},
     onEachFeature: onEachFeature
 });
 neighborhood_geojson.addTo(map);
+
+
+function raycast(point, polygon) {
+    // Credit: https://github.com/substack/point-in-polygon/blob/master/index.js
+    // Ray Casting Algorithm
+    // Returns true if point is inside polygon
+    // Assumes:
+    // 1. point has format [lat, long]
+    // 2. polygon has format [[long, lat], ...] (due to geojson format)
+
+    let x = point[0], y = point[1];
+
+    let point_inside = false;
+    for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+        let xi = polygon[i][1], yi = polygon[i][0];
+        let xj = polygon[j][1], yj = polygon[j][0];
+
+        let intersect = ((yi > y) != (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) {
+            point_inside = !point_inside;
+        }
+    }
+    return point_inside;
+};
+
+// Tests raycasting algorithm for each recording in "recordings"
+for (let i = 0; i < recordings.length; i++) {
+    for (let j = 0; j < neighborhoodsData.features.length; j++) {
+        let raycast_bool = raycast([recordings[i][1], recordings[i][2]], neighborhoodsData.features[j].geometry.coordinates[0][0]);
+        if (raycast_bool) {
+            console.log(neighborhoodsData.features[j].properties.name);
+        }
+    }
+}
 
 // var info = L.control();
 //
@@ -132,6 +171,7 @@ map.on('zoomend', function() {
 //     }, 2000);
 // });
 
+/*
 for (var i = 0; i < recordings.length; i++) {
     marker = new L.marker([recordings[i][1],recordings[i][2]],{icon: cssIcon})
         .bindPopup(recordings[i][3])
@@ -163,6 +203,7 @@ for (var i = 0; i < recordings.length; i++) {
         }, 2000);
     });
 }
+*/
 
 $('css-icon').click(function() {
     // Add the audio + source elements to the page.

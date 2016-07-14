@@ -213,3 +213,25 @@ nav, .cover, .map {
     margin: 0 0 5px;
     color: #777;
 }
+
+.hs {
+    fill: #5CC9ED;
+    fill-opacity: 0.0;
+    stroke: #5CC9ED;
+    stroke-opacity: 0.0;
+    stroke-width: 0px;
+    -webkit-transition: fill-opacity 1s linear; /* Safari */
+    transition: fill-opacity 1s linear;
+}
+
+.hs:hover {
+    fill: #5CC9ED;
+    fill-opacity: 0.4;
+    stroke: #5CC9ED;
+    stroke-opacity: 0.4;
+    stroke-width: 1px;
+    -webkit-transition: fill-opacity 0.5s linear; /* Safari */
+    transition: fill-opacity 0.5s linear;
+    -webkit-transition: stroke-opacity 0.5s linear; /* Safari */
+    transition: stroke-opacity 0.5s linear;
+}
