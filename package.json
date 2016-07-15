@@ -1,16 +1,29 @@
 {
   "name": "terratone",
   "version": "1.0.0",
-  "description": "Auditory map of SF",
+  "description": "Auditory map of San Francisco",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "engines": {
+    "node": "4.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://mitch3x3@bitbucket.org/mitch3x3/terratone.git"
+    "url": "https://mitch3x3@bitbucket.org/mitch3x3/terratone.git"
   },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "javascript"
+  ],
   "author": "Mitchell Jones",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/mitch3x3/terratone#readme"
+  "contributors": [
+  ],
+  "license": "MIT"
 }
