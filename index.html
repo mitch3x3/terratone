@@ -8,21 +8,64 @@
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
 <link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="loading.css">
+
+<audio oncanplay="myOnCanPlayFunction()"
+       oncanplaythrough="myOnCanPlayThroughFunction()"
+       onloadeddata="myOnLoadedData()"
+       onerror="myOnError()"
+       src="test.mp3"
+       >
+</audio>
+
+<script>
+
+// Buffered enough to start playing
+function myOnCanPlayFunction() {
+    // console.log('Can play');
+}
+
+// Buffered 100%
+function myOnCanPlayThroughFunction() {
+    // console.log('Can play through');
+}
+
+function myOnLoadedData() {
+    // console.log('Loaded data');
+}
+
+function myOnError() {
+    // console.log('File not loaded');
+}
+
+// var myAudio = $('audio')[0];
+// var readyState = myAudio.readyState;
+// console.log(readyState);
+</script>
 
 </head>
 <body>
 
-<div class="hamburger" onclick="toggleSidenav();">
-    <div class="hamburger-top"></div>
-    <div class="hamburger-mid"></div>
-    <div class="hamburger-bottom"></div>
+<div id="loading" class="sk-folding-cube">
+    <div class="sk-cube1 sk-cube"></div>
+    <div class="sk-cube2 sk-cube"></div>
+    <div class="sk-cube4 sk-cube"></div>
+    <div class="sk-cube3 sk-cube"></div>
 </div>
-<nav>
-    <div class="nav-header"></div>
-    <div class="links"><a class="active" href="">Home</a></div>
-</nav>
 
-<div class="map" id="map"></div>
+<div id="page">
+    <div class="hamburger" onclick="toggleSidenav();">
+        <div class="hamburger-top"></div>
+        <div class="hamburger-mid"></div>
+        <div class="hamburger-bottom"></div>
+    </div>
+    <nav>
+        <div class="nav-header"></div>
+        <div class="links"><a class="active" href="">Home</a></div>
+    </nav>
+
+    <div class="map" id="map"></div>
+</div>
 
 <script>
 //var audio = new Audio('test.mp3');

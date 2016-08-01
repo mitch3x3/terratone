@@ -6,6 +6,7 @@ html, body {
   font-family: sans-serif;
   max-width: 100%;
   overflow: hidden;
+  background-color: #141414;
 }
 
 .hamburger {
@@ -109,10 +110,10 @@ nav, .cover, .map {
 }
 
 .map {
-	position: absolute;
+  position: absolute;
   background: black;
   height: 100%;
-	width: 100%;
+  width: 100%;
 }
 
 .sidenav-active .map {
@@ -203,9 +204,11 @@ nav, .cover, .map {
 
 .info {
     padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
+    font: 24px/16px Verdana, sans-serif;
+    color: rgba(255,255,255,0.8);
     background: white;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.0);
+    opacity: 0.0;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
 }
