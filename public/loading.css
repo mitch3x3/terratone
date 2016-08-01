@@ -99,10 +99,10 @@
 
 #page {
     opacity: 0;
-    -webkit-transition: opacity 2s;
-    -moz-transition: opacity 2s;
-    -o-transition: opacity 2s;
-    transition: opacity 2s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
 }
 #loading {
     width: 50px;
@@ -115,8 +115,8 @@
     right: 0;
     margin: auto;
     opacity: 1;
-    -webkit-transition: opacity 3s;
-    -moz-transition: opacity 3s;
-    -o-transition: opacity 3s;
-    transition: opacity 3s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
 }

@@ -53,8 +53,10 @@ function onReady(callback) {
 function show(id, value) {
     //document.getElementById(id).style.display = value ? 'block' : 'none';
     //document.getElementById(id).style.opacity = value ? '1' : '0';
-    document.getElementById('page').style.opacity = value ? '0' : '1';
     document.getElementById('loading').style.opacity = value ? '1' : '0';
+    setTimeout(function(){
+        document.getElementById('page').style.opacity = value ? '0' : '1';
+    }, 1000);
 }
 
 onReady(function () {
