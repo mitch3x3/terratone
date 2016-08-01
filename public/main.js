@@ -30,12 +30,18 @@ function onReady(callback) {
     var intervalID = window.setInterval(checkReady, 1000);
     function checkReady() {
         // console.log("all files loaded");
-        let test_time = 5000;
+        let test_time = 0;
         if (loaded == audioFiles.length) {
             window.clearInterval(intervalID);
             setTimeout(function(){
                 callback.call(this);
             }, test_time);
+        }
+        else {
+            setTimeout(function(){
+                window.clearInterval(intervalID);
+                callback.call(this);
+            }, 5000);
         }
         // if (document.getElementsByTagName('body')[0] !== undefined) {
         //     window.clearInterval(intervalID);
