@@ -3,3 +3,8 @@
 node_modules
 audio_files
 audio_files_all
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

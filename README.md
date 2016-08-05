@@ -2,12 +2,31 @@
 
 A auditory map of San Francisco that focuses on the sounds of the city.
 
-### Phase 1:
-- Prepare website for scaling and accomodating large amounts of audio files
-  and css.
-- Record 60s background recordings from each neighborhood.
-- Deploy to Heroku.
+## Deploy to AWS (Elastic Beanstalk)
 
+[This](http://terratone.us-east-1.elasticbeanstalk.com/) is an alias to the
+actual [terratone.io](http://www.terratone.io).
+
+Deploy:
+```
+$ eb deploy
+```
+
+Open in new window:
+```
+$ eb open
+```
+
+## Deploy to Heroku
+
+After commiting and pushing your git changes:
+
+Deploy:
+```
+$ git push heroku master
+```
+
+View at: [terratone.herokuapp.com](https://terratone.herokuapp.com/)
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
