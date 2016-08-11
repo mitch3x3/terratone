@@ -17,6 +17,7 @@ function preloadAudio(url) {
     // the file will be kept by the browser as cache
     audio.addEventListener('canplaythrough', loadedAudio, false);
     audio.src = url;
+    audio.preload = "automatic";
 }
 
 var loaded = 0;
@@ -30,7 +31,7 @@ function onReady(callback) {
     var intervalID = window.setInterval(checkReady, 1000);
     function checkReady() {
         // console.log("all files loaded");
-        let test_time = 0;
+        var test_time = 0;
         if (loaded == audioFiles.length) {
             window.clearInterval(intervalID);
             setTimeout(function(){
@@ -77,7 +78,7 @@ var cssIcon = L.divIcon({
 });
 
 var map = L.map('map', { zoomControl: false });
-map.setView([37.7552,-122.4431], 13);
+map.setView([37.7600,-122.4431], 13);
 map.options.minZoom = 12;
 map.options.maxZoom = 16;
 L.control.zoom({ position:'topright' }).addTo(map);
@@ -211,14 +212,14 @@ function raycast(point, polygon) {
     // 1. point has format [lat, long]
     // 2. polygon has format [[long, lat], ...] (due to geojson format)
 
-    let x = point[0], y = point[1];
+    var x = point[0], y = point[1];
 
-    let point_inside = false;
-    for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
-        let xi = polygon[i][1], yi = polygon[i][0];
-        let xj = polygon[j][1], yj = polygon[j][0];
+    var point_inside = false;
+    for (var i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+        var xi = polygon[i][1], yi = polygon[i][0];
+        var xj = polygon[j][1], yj = polygon[j][0];
 
-        let intersect = ((yi > y) != (yj > y))
+        var intersect = ((yi > y) != (yj > y))
             && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
         if (intersect) {
             point_inside = !point_inside;
@@ -229,15 +230,15 @@ function raycast(point, polygon) {
 
 // MATCHING RECORDING TO HIGHLIGHTED POLYGON
 
-// let raycast_bool = raycast([recordings[0][1], recordings[0][2]], neighborhoodsData.features[0].geometry.coordinates[0][0]);
+// var raycast_bool = raycast([recordings[0][1], recordings[0][2]], neighborhoodsData.features[0].geometry.coordinates[0][0]);
 // console.log(raycast_bool);
 // console.log(recordings[0][4]);
 
 // Tests raycasting algorithm for each recording in "recordings"
 function raycast_test() {
-    for (let i = 0; i < recordings.length; i++) {
-        for (let j = 0; j < neighborhoodsData.features.length; j++) {
-            let raycast_bool = raycast([recordings[i][1], recordings[i][2]], neighborhoodsData.features[j].geometry.coordinates[0][0]);
+    for (var i = 0; i < recordings.length; i++) {
+        for (var j = 0; j < neighborhoodsData.features.length; j++) {
+            var raycast_bool = raycast([recordings[i][1], recordings[i][2]], neighborhoodsData.features[j].geometry.coordinates[0][0]);
             if (raycast_bool) {
                 console.log(neighborhoodsData.features[j].properties.name);
                 //info.update(neighborhoodsData.features[j].properties);

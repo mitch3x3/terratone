@@ -1,3 +1,6 @@
+// Credit: SF OpenData
+// https://data.sfgov.org/
+
 var neighborhoodsData =
 {
     "type": "FeatureCollection",
