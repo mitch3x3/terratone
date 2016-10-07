@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<meta charset="utf-8" />
+<script src="jquery/jquery-latest.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="loading.css">
+
+<script>
+</script>
+
+</head>
+<body>
+
+<div class="hamburger" onclick="toggleSidenav();">
+    <div class="hamburger-top"></div>
+    <div class="hamburger-mid"></div>
+    <div class="hamburger-bottom"></div>
+</div>
+<nav>
+    <div class="nav-header">
+        <span><img class="img-logo" src="icons/tt-logo.png"></span>
+    </div>
+    <a class="nav-links" href=".">
+        <span class="icon"><img class="img-icon" src="icons/home.png"></span>
+        <span class="text">Home</span>
+    </a>
+    <a class="nav-links" href="/about">
+        <span class="icon"><img class="img-icon" src="icons/world.png"></span>
+        <span class="text">About</span>
+    </a>
+    <a class="nav-links" href="#/contact">
+        <span class="icon"><img class="img-icon" src="icons/telephone.png"></span>
+        <span class="text">Contact</span>
+    </a>
+    <a class="nav-links" href="#/submit">
+        <span class="icon"><img class="img-icon" src="icons/cloud.png"></span>
+        <span class="text">Submit</span>
+    </a>
+    <a class="nav-links" href="https://github.com/terratone/terratone">
+        <span class="icon"><img class="img-icon" src="icons/github.png"></span>
+        <span class="text">Github</span>
+    </a>
+</nav>
+
+<!-- About page -->
+<div>
+    About
+</div>
+
+<script>
+    function toggleSidenav() {
+      document.body.classList.toggle('sidenav-active');
+    }
+</script>
+</body>
+</html>

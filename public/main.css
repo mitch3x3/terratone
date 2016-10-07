@@ -68,12 +68,7 @@ nav {
   transition: transform 0.4s;
 }
 
-nav .nav-header {
-  margin: 50px 0;
-}
-
 nav a {
-  display: block;
   background-color: #0E0E0E;
 }
 
@@ -128,6 +123,8 @@ span.text {
 }
 
 span.icon {
+  width: 20px;
+  height: 20px;
   z-index: -1;
   display: inline-block;
   vertical-align: middle;
@@ -135,10 +132,27 @@ span.icon {
   left: 30%;
 }
 
-img {
+.img-icon {
   width: 20px;
   height: 20px;
   vertical-align: middle;
+}
+
+.img-logo {
+  display: inline-block;
+  width: 60%;
+  left: 30%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.nav-header {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  color: white;
+  font-size: 24px;
 }
 
 @media (min-width: 701px) {
@@ -165,6 +179,7 @@ img {
     span.text {padding-left:40%}
     span.text {font-size:12px}
     span.text {display:none}
+    .img-logo {display:none}
 }
 
 nav, .cover, .map {
