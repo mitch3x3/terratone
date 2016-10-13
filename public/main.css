@@ -64,6 +64,7 @@ nav {
   height: 100%;
   width: 20%;
   left: -20%;
+  z-index: 2;
   -webkit-transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
 }
@@ -216,7 +217,7 @@ nav, .cover, .map {
 
 .sidenav-active .hamburger-top {
   position: fixed;
-  background-color: #00FFFF;
+  background-color: #00CCCC;
   top: 25px;
   left: 15px;
   transform: rotate(45deg);
@@ -224,7 +225,7 @@ nav, .cover, .map {
 }
 .sidenav-active .hamburger-mid {
   position: fixed;
-  background-color: #00FFFF;
+  background-color: #00CCCC;
   top: 25px;
   left: 15px;
   background-color: transparent;
@@ -232,7 +233,7 @@ nav, .cover, .map {
 }
 .sidenav-active .hamburger-bottom {
   position: fixed;
-  background-color: #00FFFF;
+  background-color: #00CCCC;
   top: 25px;
   left: 15px;
   transform: rotate(-45deg);
@@ -246,7 +247,7 @@ nav, .cover, .map {
 }
 
 .gradient {
-  background-image: radial-gradient(rgba(0, 0, 255, 0) 50%, #00FFFF 95%);
+  background-image: radial-gradient(rgba(0, 0, 255, 0) 50%, #00CCCC 95%);
 }
 
 .leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-in {
@@ -262,12 +263,12 @@ nav, .cover, .map {
 
 .leaflet-control-container:hover .leaflet-top:hover .leaflet-control-zoom:hover a.leaflet-control-zoom-in:hover {
   color: black;
-  background-color: #00FFFF;
+  background-color: #00CCCC;
   opacity: 0.5;
 }
 .leaflet-control-container:hover .leaflet-top:hover .leaflet-control-zoom:hover a.leaflet-control-zoom-out:hover {
   color: black;
-  background-color: #00FFFF;
+  background-color: #00CCCC;
   opacity: 0.5;
 }
 
@@ -278,11 +279,11 @@ nav, .cover, .map {
   border: 10px;
   border-color: white;
   border-width: medium;
-  background-color: #00FFFF;
+  background-color: #00CCCC;
   opacity: 0.5;
   -webkit-transition: background-color 1s linear; /* Safari */
   transition: background-color 1s linear;
-  background-image: radial-gradient(rgba(0, 0, 255, 0) 50%, #00FFFF 95%);
+  background-image: radial-gradient(rgba(0, 0, 255, 0) 50%, #00CCCC 95%);
 }
 
 .css-icon:hover {
