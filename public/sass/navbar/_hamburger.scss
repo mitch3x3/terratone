@@ -1,0 +1,40 @@
+.properties {
+	position: fixed;
+	left: 15px;
+	border-radius: 1px;
+}
+
+.hamburger {
+	@extend .properties;
+	top: 15px;
+	background-color: transparent;
+	z-index: 9999;
+	padding: 15px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.slice {
+	@extend .properties;
+	background-color: $primary-color;
+	height: 5px;
+	width: 30px;
+	margin-bottom: 5px;
+	transition: all 0.5s ease-in-out;
+}
+
+.hamburger-top {
+	@extend .slice;
+	top: 15px;
+}
+
+.hamburger-mid {
+	@extend .slice;
+	top: 25px;
+}
+
+.hamburger-bottom {
+	@extend .slice;
+	top: 35px;
+}

@@ -5,120 +5,10 @@
 <meta charset="utf-8" />
 <script src="jquery/jquery-latest.min.js" type="text/javascript"></script>
 
-<link rel="stylesheet" type="text/css" href="main.css">
-<link rel="stylesheet" type="text/css" href="loading.css">
-
-<style>
-* { box-sizing: border-box; }
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
-
-html, body {
-    background: #000000;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-}
-
-.background-image {
-    background: no-repeat center center fixed;
-    background-size: cover;
-    display: block;
-    left: -5px;
-    right: -5px;
-    top:-5px;
-    bottom:-5px;
-    position: fixed;
-    /*z-index: -1;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    margin:-5px;
-}
-
-h2 {
-    text-align: center;
-    font-weight: 200;
-    font-size: 30px;
-    margin-top: 50px;
-}
-h3 {
-    text-align: center;
-    font-weight: 200;
-    font-size: 20px;
-    vertical-align: middle;
-    padding: 12px;
-    color: #F6F6F6
-}
-
-.about {
-    font-family: "Roboto", Helvetica, sans-serif;
-    font-weight: 100;
-    line-height: 30px;
-    position: absolute;
-    display:block;
-}
-
-.details {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 250px;
-    margin-right: 250px;
-    line-height: 25px;
-    float: left;
-}
-
-.separator {
-    position: relative;
-    color: #fff;
-}
-.separator:before {
-    position: absolute;
-    text-align: center;
-    right: 200px;
-    left: 200px;
-    border-width: 1px 0 0;
-    border-style: solid;
-    border-top-color: #505254;
-    content: '';
-    -webkit-mask-image: radial-gradient(circle,#000 10%,transparent);
-}
-
-#grad1 {
-    height: 50px;
-    /*background: rgba(92, 201, 237, 0.9);*/
-    background: rgba(0, 0, 0, 0.3);
-    /*background: -webkit-linear-gradient(left top, rgba(92, 201, 237, 0.9), rgba(92, 201, 237, 0.5)); /* For Safari 5.1 to 6.0 */
-    /*background: -o-linear-gradient(bottom right, rgba(92, 201, 237, 0.9), rgba(92, 201, 237, 0.5)); /* For Opera 11.1 to 12.0 */*/
-    /*background: -moz-linear-gradient(bottom right, rgba(92, 201, 237, 0.9), rgba(92, 201, 237, 0.5)); /* For Firefox 3.6 to 15 */*/
-    /*background: linear-gradient(to bottom right, rgba(92, 201, 237, 0.9), rgba(92, 201, 237, 0.5)); /* Standard syntax (must be last) */*/
-    /*-webkit-mask-image: radial-gradient(circle,#000 10%,transparent);*/*/
-}
-#grad2 {
-    font-weight: 200;
-    font-size: 15px;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 2px;
-}
-
-.title {
-    vertical-align: middle;
-}
-
-</style>
-
-<script>
-</script>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
-<body>
+<body class="bg-about">
 
 <div class="hamburger" onclick="toggleSidenav();">
     <div class="hamburger-top"></div>
@@ -152,44 +42,39 @@ h3 {
 </nav>
 
 <!-- About page -->
-<div class="background-image">
-    <img src="sfgray-blur.jpg"/>
-</div>
-<div class="about">
-    <h2>About</h2>
-    <div class="separator"></div>
-    <div class="details">
-        <div id="grad">
+<div id="about">
+    <div class="background-image">
+        <img src="sfgray-blur.jpg"/>
+    </div>
+    <div class="about-content">
+        <h2>About</h2>
+        <div class="separator"></div>
+        <div class="details">
             <h3>Our Mission</h3>
-        </div>
-        <div id="grad2">
-            An art project at heart, terratone.io was created with the goal of
-            mapping background sounds from all over the world.
-            With the initial proof of concept recorded in San Francisco,
-            our hope is to grow the size of our sound map via user submissions.
-        </div>
-        <div id="grad">
+            <p>
+                An art project at heart, terratone.io was created with the goal of
+                mapping background sounds from all over the world.
+                With the initial proof of concept recorded in San Francisco,
+                our hope is to grow the size of our sound map via user submissions.
+            </p>
             <h3>Contribute</h3>
-        </div>
-        <div id="grad2">
-            We make it easy to and fast to contribute. Just navigate to the 'submit'
-            page and follow the two step process of submitting your audio file.
-            First submit the audio file to my dropbox account, and then fill out
-            the submission form with the recordings details and coordinates.
-            Audio files with the format wav or aiff are preferred, but mp3's are
-            also accepted. All of San Francisco's sounds were recorded using a
-            Tascam DR-40 with a deadcat filter for noise reduction due to wind.
-            In order for submission to be considered the audio file must be
-            in stereo and noise-free within reason. Each submission will be
-            screened to meet quality standards.
-        </div>
+            <p>
+                We make it easy to and fast to contribute. Just navigate to the 'submit'
+                page and follow the two step process of submitting your audio file.
+                First submit the audio file to my dropbox account, and then fill out
+                the submission form with the recordings details and coordinates.
+                Audio files with the format wav or aiff are preferred, but mp3's are
+                also accepted. All of San Francisco's sounds were recorded using a
+                Tascam DR-40 with a deadcat filter for noise reduction due to wind.
+                In order for submission to be considered the audio file must be
+                in stereo and noise-free within reason. Each submission will be
+                screened to meet quality standards.
+            </p>
 
+        </div>
     </div>
 </div>
-<script>
-    function toggleSidenav() {
-        document.body.classList.toggle('sidenav-active');
-    }
-</script>
+
+<script src="js/sidenav-toggle.js" type="text/javascript"></script>
 </body>
 </html>

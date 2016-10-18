@@ -9,6 +9,8 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.13.3",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
     "nodemailer": "^2.6.4"
   },
   "engines": {

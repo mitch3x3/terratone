@@ -1,0 +1,24 @@
+$font-stack: 'Lucida Grande', Helvetica, sans-serif;
+$primary-background: #141414;
+$form-background: #242426;
+
+$primary-color: #009090;
+$secondary-color: #00CCCC;
+$submit-button-dark: #008080;
+
+@import 'pages/pages';
+@import 'navbar/navbar';
+@import 'loading';
+@import 'map/map';
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $font-stack;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: $primary-background;
+}

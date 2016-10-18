@@ -1,0 +1,20 @@
+#submit {
+	@extend .form;
+
+	input[type="float1"] {
+		float: left;
+		width: 49%;
+		display: inline-block;
+		@extend .form-input;
+	}
+	input[type="float2"] {
+		float: right;
+		width: 49%;
+		display: inline-block;
+		@extend .form-input;
+	}
+	input[type="datetime-local"] {
+		width: 100%;
+		@extend .form-input;
+	}
+}

@@ -1,0 +1,144 @@
+$form-font-color: #777777;
+
+@import 'pages/contact';
+@import 'pages/submit';
+@import 'pages/about';
+
+.bg-form {
+	background-color: $form-background;
+}
+.info-block {
+	font-size: 18px;
+}
+.container {
+	max-width: 400px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.hide {
+	position: absolute;
+	display: none;
+}
+
+.form-input {
+    font-family: $font-stack;
+    color: $form-font-color;
+    border: 1px solid #ccc;
+    background: #FFFFFF;
+    margin: 0 0 5px;
+    padding: 10px;
+	box-sizing: border-box;
+    -webkit-transition: border-color 0.1s ease-in-out;
+    -moz-transition: border-color 0.1s ease-in-out;
+    -o-transition: border-color 0.1s ease-in-out;
+    -ms-transition: border-color 0.1s ease-in-out;
+    transition: border-color 0.1s ease-in-out;
+    &:hover {
+        -webkit-transition: border-color 0.3s ease-in-out;
+        -moz-transition: border-color 0.3s ease-in-out;
+        -o-transition: border-color 0.3s ease-in-out;
+        -ms-transition: border-color 0.3s ease-in-out;
+        transition: border-color 0.3s ease-in-out;
+        border: 1px solid #aaa;
+    }
+}
+
+.form {
+	font-weight: 100;
+	font-size: 12px;
+	line-height: 30px;
+	color: $form-font-color;
+	background: #F9F9F9;
+	padding: 25px;
+	margin: 150px 0;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	border-radius: 2px;
+	h3 {
+		display: block;
+		font-size: 30px;
+		font-weight: 300;
+		margin-bottom: 10px;
+		margin-top: 0px;
+		padding: 0px;
+		width: 100%;
+	}
+	fieldset {
+		border: medium none;
+		margin: 0 0 10px 0;
+		min-width: 100%;
+		padding: 0px;
+		width: 100%;
+	}
+	input[type="text"] {
+		width: 100%;
+        @extend .form-input;
+
+	}
+	input[type="email"] {
+		width: 100%;
+		@extend .form-input;
+	}
+	textarea {
+		width: 100%;
+		border: 1px solid #ccc;
+		background: #FFF;
+		margin: 0 0 5px;
+		padding: 10px;
+		box-sizing: border-box;
+		-webkit-transition: border-color 0.1s ease-in-out;
+		-moz-transition: border-color 0.1s ease-in-out;
+		-o-transition: border-color 0.1s ease-in-out;
+		-ms-transition: border-color 0.1s ease-in-out;
+		transition: border-color 0.1s ease-in-out;
+		height: 100px;
+		max-width: 100%;
+		resize: none;
+		&:hover {
+			-webkit-transition: border-color 0.3s ease-in-out;
+			-moz-transition: border-color 0.3s ease-in-out;
+			-o-transition: border-color 0.3s ease-in-out;
+			-ms-transition: border-color 0.3s ease-in-out;
+			transition: border-color 0.3s ease-in-out;
+			border: 1px solid #aaa;
+		}
+		&:focus {
+			outline: 0;
+			border: 1px solid #aaa;
+		}
+	}
+	button[type="submit"] {
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		background: #009090;
+		color: #FFF;
+		margin: 0 0 5px;
+		padding: 10px;
+		font-size: 15px;
+		box-sizing: border-box;
+		-webkit-transition: background 0.1s ease-in-out;
+		-moz-transition: background 0.1s ease-in-out;
+		-o-transition: background 0.1s ease-in-out;
+		-ms-transition: background 0.1s ease-in-out;
+		transition: background-color 0.1s ease-in-out;
+		&:hover {
+			background: #008080;
+			-webkit-transition: background 0.3s ease-in-out;
+			-moz-transition: background 0.3s ease-in-out;
+			-o-transition: background 0.3s ease-in-out;
+			-ms-transition: background 0.3s ease-in-out;
+			transition: background-color 0.3s ease-in-out;
+		}
+		&:active {
+			box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+		}
+	}
+	input {
+		&:focus {
+			outline: 0;
+			border: 1px solid #aaa;
+		}
+	}
+}

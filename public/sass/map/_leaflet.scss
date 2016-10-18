@@ -1,0 +1,61 @@
+.leaflet-control-container {
+	.leaflet-top {
+		.leaflet-control-zoom {
+			a.leaflet-control-zoom-in {
+				color: white;
+				background-color: #009090;
+				opacity: 0.7;
+			}
+			a.leaflet-control-zoom-out {
+				color: white;
+				background-color: #009090;
+				opacity: 0.7;
+			}
+		}
+	}
+	&:hover {
+		.leaflet-top {
+			&:hover {
+				.leaflet-control-zoom {
+					&:hover {
+						a.leaflet-control-zoom-in {
+							&:hover {
+								color: black;
+								background-color: #00CCCC;
+								opacity: 0.5;
+							}
+						}
+						a.leaflet-control-zoom-out {
+							&:hover {
+								color: black;
+								background-color: #00CCCC;
+								opacity: 0.5;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.hs {
+	fill: #5CC9ED;
+	fill-opacity: 0.0;
+	stroke: #5CC9ED;
+	stroke-opacity: 0.0;
+	stroke-width: 0px;
+	-webkit-transition: fill-opacity 1s linear;
+	transition: fill-opacity 1s linear;
+	&:hover {
+		fill: #5CC9ED;
+		fill-opacity: 0.4;
+		stroke: #5CC9ED;
+		stroke-opacity: 0.4;
+		stroke-width: 1px;
+		-webkit-transition: fill-opacity 0.5s linear;
+		transition: fill-opacity 0.5s linear;
+		-webkit-transition: stroke-opacity 0.5s linear;
+		transition: stroke-opacity 0.5s linear;
+	}
+}

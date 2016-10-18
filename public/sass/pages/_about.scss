@@ -1,0 +1,72 @@
+.bg-about {
+    background: #000000;
+}
+
+#about {
+	img {
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+	.background-image {
+		background: no-repeat center center fixed;
+		background-size: cover;
+		display: block;
+		left: -5px;
+		right: -5px;
+		top: -5px;
+		bottom: -5px;
+		position: fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		margin: -5px;
+	}
+    p {
+        font-size: 15px;
+        text-align: left;
+        font-weight: 100;
+        line-height: 25px;
+    	padding: 20px;
+    	background: rgba(255, 255, 255, 0.85);
+    	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+    	border-radius: 2px;
+    }
+	h2 {
+        margin-top: 50px;
+        margin-bottom: 10px;
+		text-align: center;
+		font-weight: 100;
+		font-size: 30px;
+        color: #000000;
+	}
+	h3 {
+    	margin-top: 40px;
+		text-align: center;
+		font-weight: 100;
+		font-size: 20px;
+		color: #F6F6F6;
+	}
+	.about-content {
+		font-family: "Roboto", Helvetica, sans-serif;
+        position: absolute;
+		display: inline-block;
+	}
+	.details {
+        min-width: 550px;
+        max-width: 550px;
+        margin-bottom: 20px;
+		margin-left: 250px;
+	    margin-right: 250px;
+	}
+	.separator {
+		position: absolute;
+        padding: 20px;
+		right: 200px;
+		left: 200px;
+		border-width: 1px 0 0;
+		border-style: solid;
+		border-top-color: #505254;
+		-webkit-mask-image: radial-gradient(circle,#000000 10%,transparent);
+	}
+}
