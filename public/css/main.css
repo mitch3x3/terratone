@@ -311,7 +311,7 @@ span.icon {
 
 .sidenav-active #map {
   margin-left: 20%;
-  width: 80%; }
+  width: 100%; }
 
 .sidenav-active .hamburger-top {
   position: fixed;
